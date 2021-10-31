@@ -48,7 +48,7 @@ function App() {
         everything after is what we are sending to the GalleryList,
         we create a variable and set it's value to our images array
         */}
-        <GalleryList imagesToSendToGL={images}/> 
+        <GalleryList imagesToSendToGL={images} getImages={getImages}/> 
       </div>
     );
 }

@@ -12,36 +12,22 @@ function GalleryItem( props ){
       } //end toggleShowImage
 
     //create a variable called likeUnlike and set it's value to false (because pictures are unliked in their default state)
-    const [like, setLike ] = useState (0);
-    const increaseLike = ()=>{
-        setLike ( setLike + 1 );
-        addLike();
-        props.addTotalLikes();
-      } // end increaseRocks
-     
-      const decreaseLike = ()=>{
-       if( like > 0 ){
-       setLike ( like - 1 );
-       removeLike();
-       props.removeTotalLikes();
-       }
-      } //end decreaseLike
 
     const addLike=()=>{
-        axios.put( `/gallery/addLike/${props.imageToSendtoGI.id}`, props.imageToSendtoGI ).then( (response)=>{
+        axios.put( `/gallery/like/${props.imageToSendtoGI.id}`, props.imageToSendtoGI ).then( (response)=>{
         props.getImages();
         }).catch((err)=>{
         console.log('error:', err);
         });
     }//end addLike
 
-    const removeLike=()=>{
-        axios.put( `/gallery/removeLike/${props.imageToSendtoGI.id}`, props.imageToSendtoGI ).then( (response)=>{
-        props.getImages();
-        }).catch((err)=>{
-        console.log('error:', err);
-        });
-    }
+    // const removeLike=()=>{
+    //     axios.put( `/gallery/removeLike/${props.imageToSendtoGI.id}`, props.imageToSendtoGI ).then( (response)=>{
+    //     props.getImages();
+    //     }).catch((err)=>{
+    //     console.log('error:', err);
+    //     });
+    // }
 
     return(
         <div>
@@ -54,8 +40,8 @@ function GalleryItem( props ){
             // if no:
             <h2 onClick={toggleShowImage}> {props.imageToSendtoGI.description}</h2>
             }
-            <button onClick={increaseLike}>Like</button>
-            <button onClick={decreaseLike}>Unlike</button>
+            <button onClick={addLike}>Like {props.imageToSendtoGI.likes}</button>
+            {/* <h3>{props.imageToSendtoGI.likes}</h3> */}
         </div>
     )
 }

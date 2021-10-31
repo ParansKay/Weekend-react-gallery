@@ -15,7 +15,7 @@ function GalleryList( props ){
             everytime we run into an index, 
             we are bringing in GalleryItem and send it a prop,
             we create a new variable called imageToSendtoGI=cuuret image that we are on */}
-            {props.imagesToSendToGL.map(image => (<GalleryItem imageToSendtoGI={image} key={image.id}/>))}
+            {props.imagesToSendToGL.map(image => (<GalleryItem imageToSendtoGI={image} key={image.id} getImages={props.getImages}/>))}
         </div>
     )
 }
