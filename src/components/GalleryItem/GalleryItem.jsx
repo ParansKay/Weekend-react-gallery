@@ -12,21 +12,20 @@ function GalleryItem( props ){
       } //end toggleShowImage
 
     //create a variable called likeUnlike and set it's value to false (because pictures are unliked in their default state)
-    const [likeUnlike, setLikeUnlike ] = useState (false);
-    //create a function called toggleLikeUnlike (we're going to create a button for it in the return div)
-    const toggleLikeUnlike =()=>{
-        // if something is not liked, 
-        if( !likeUnlike ){   
-            // set the value of likeUnlike to true (heart the image)
-            setLikeUnlike(true)
-            addLike();
-        }
-        // otherwise, if the image is liked, set the value to false (un-heart)
-        else{
-            setLikeUnlike(false)
-            removeLike();
-        }
-    }// end toggleLikeUnlike
+    const [like, setLike ] = useState (0);
+    const increaseLike = ()=>{
+        setLike ( setLike + 1 );
+        addLike();
+        props.addTotalLikes();
+      } // end increaseRocks
+     
+      const decreaseLike = ()=>{
+       if( like > 0 ){
+       setLike ( like - 1 );
+       removeLike();
+       props.removeTotalLikes();
+       }
+      } //end decreaseLike
 
     const addLike=()=>{
         axios.put( `/gallery/addLike/${props.imageToSendtoGI.id}`, props.imageToSendtoGI ).then( (response)=>{
@@ -55,24 +54,8 @@ function GalleryItem( props ){
             // if no:
             <h2 onClick={toggleShowImage}> {props.imageToSendtoGI.description}</h2>
             }
-
-            {/* Calling our toggleLikeUnlike function and defining what happens when it's used */}
-            {
-            // if like is true,
-            likeUnlike?
-            // then, we can un-heart the image
-            <button onClick={toggleLikeUnlike}>un-Heart</button> :
-            // else, if it's false, we can heart it
-            <button onClick={toggleLikeUnlike}>Heart</button> 
-              }
-
-            { 
-             //if someone has liked it, display happy message with count, otherwise, sad 'no people' message
-            // numLikes > 0 ?
-            // <h3>{numLikes} people love this!</h3> :
-            // <h3>No people love this :(</h3>
-            }
-
+            <button onClick={increaseLike}>Like</button>
+            <button onClick={decreaseLike}>Unlike</button>
         </div>
     )
 }

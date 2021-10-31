@@ -27,7 +27,17 @@ function App() {
       console.log( 'error', err );
     })
   }
-  
+
+  const [ totalLikes, setTotalLikes ] = useState(0);
+
+  const addTotalLikes = () => {
+    setTotalLikes( totalLikes + 1 )
+  }
+
+  const removeTotalLikes = () => {
+    setTotalLikes( totalLikes -1 )
+  }
+
     return (
       <div className="App">
         <header className="App-header">
@@ -38,7 +48,7 @@ function App() {
         everything after is what we are sending to the GalleryList,
         we create a variable and set it's value to our images array
         */}
-        <GalleryList imagesToSendToGL={images}/>
+        <GalleryList imagesToSendToGL={images}/> 
       </div>
     );
 }
