@@ -1,5 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import * as React from 'react';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 function GalleryItem( props ){
 
@@ -21,27 +25,22 @@ function GalleryItem( props ){
         });
     }//end addLike
 
-    // const removeLike=()=>{
-    //     axios.put( `/gallery/removeLike/${props.imageToSendtoGI.id}`, props.imageToSendtoGI ).then( (response)=>{
-    //     props.getImages();
-    //     }).catch((err)=>{
-    //     console.log('error:', err);
-    //     });
-    // }
-
     return(
-        <div>
+        <div className="galleryItem">
+            <div className="img2Crop">
             {/* Calling our toggle function and defining what happens when it's used */}
             {
             // if showImage is true, display the image
             showImage?
             // if yes: 
-            <img onClick={toggleShowImage} src={ props.imageToSendtoGI.path }/>:
+            <img className="imgFix" onClick={toggleShowImage} src={ props.imageToSendtoGI.path }/>:
             // if no:
             <h2 onClick={toggleShowImage}> {props.imageToSendtoGI.description}</h2>
             }
-            <button onClick={addLike}>Like {props.imageToSendtoGI.likes}</button>
-            {/* <h3>{props.imageToSendtoGI.likes}</h3> */}
+            </div>
+            <div>
+            <Button color="secondary" variant="outlined" onClick={addLike} endIcon={<FavoriteIcon />}>Like {props.imageToSendtoGI.likes}</Button>
+            </div>
         </div>
     )
 }

@@ -41,14 +41,17 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+          <h1 className="App-title">Paran's Memory Gallery!</h1>
+        <h3 className="app-description">a small, representative gallery of memories and happy moments!</h3>
         </header>
-        <p>Gallery goes here</p>
         {/* we are bringing in the GalleryList component, 
         everything after is what we are sending to the GalleryList,
         we create a variable and set it's value to our images array
         */}
         <GalleryList imagesToSendToGL={images} getImages={getImages}/> 
+        <div>
+          <footer className="footer"/>
+        </div>
       </div>
     );
 }

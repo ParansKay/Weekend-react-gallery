@@ -3,13 +3,66 @@
 }
 
 .App-header {
-  background-color: #222;
-  padding: 1em;
+  padding: .5em;
   color: white;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
+  background-color: rgb(102, 43, 129);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 48px;
+  /* margin-bottom: 3px; */
+}
+
+.app-description{
+  font-size: 20px;
+  font-family: open sans, sans-serif;
+  font-weight: lighter;
+  position: relative; top: -40px;
 }
 
 .App-title {
   font-size: 1.5em;
 }
 
+.galleryList{
+  border: 2px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal;
+  /* column-gap: 1px; */
+  row-gap: 40px;
+}
+
+.imgFix {
+  height: 500px;
+  width: auto;  
+}
+
+.galleryItem {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  padding: 10px;
+  height: 400 px;
+  margin: auto;
+}
+
+.img2Crop {
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.footer{
+  padding: 2em;
+}
