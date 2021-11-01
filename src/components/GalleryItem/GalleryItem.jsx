@@ -35,7 +35,7 @@ function GalleryItem( props ){
             // if yes: 
             <img className="imgFix" onClick={toggleShowImage} src={ props.imageToSendtoGI.path }/>:
             // if no:
-            <h2 onClick={toggleShowImage}> {props.imageToSendtoGI.description}</h2>
+            <h2 className="imgDescription" onClick={toggleShowImage}> {props.imageToSendtoGI.description}</h2>
             }
             </div>
             <div>

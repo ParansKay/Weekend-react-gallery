@@ -4,9 +4,10 @@ const galleryItems = [
     { id: 3, path: './images/CinderellaWaltz.png', description: 'This is the first show I produced. It started out as a supervisor role to help students at my alma mater get into summer-stock theatre, and ended up with me directing, designing, and producing the show. It was absolutely nuts, but it always serves as one of my proudest moments creating theatre—and an example of how creative we can be in our storytelling when funds are limited.', likes: 0 },
     { id: 4, path: './images/PD.png', description: 'Thanksgiving 2020 for two introverts', likes: 0 },
     { id: 5, path: './images/Lumi_nose.png', description: 'Lumi is the newest edition to our little family. He loves touching and licking our noses, talking loudly at us, and peeing standing up.', likes: 0 },
-    { id: 6, path: './images/PnE.png', description: 'Doing my best friend, and Prime Alum, Elizabeth\'s makeup for her wedding day!', likes: 0 },
-    { id: 7, path: './images/Putnam.png', description: 'My favorite production, ever! 25th Annual Putnam County Spelling Bee. Playing Olive Ostrovsky was a DREAM COME TRUE.', likes: 0 },
-    { id: 8, path: './images/Chloe.png', description: 'One of my favorite hobbies is digital video game art. Meet Chloe from Life is Strange.', likes: 0 },
+    { id: 6, path: './images/PnE.png', description: 'Doing my best friend, Elizabeth\'s makeup (an OG Prime Alum!!!!!) on her wedding day!', likes: 0 },
+    { id: 7, path: './images/Putnam.png', description: 'My favorite production ever! 25th Annual Putnam County Spelling Bee. Playing Olive Ostrovsky was a DREAM COME TRUE. Also Dillon playing Leaf Coneybear—the nerdy, trusting, goof singing about dinosaurs on stage? Could not have been a more perfect role for him. Check out the OG soundtrack on Spotify XD', likes: 0 },
+    { id: 8, path: './images/fambam.png', description: 'Photographic evidence that Penelope can actually stand being in close proximity to Lumi, despite what she was trying to convey to us when we first adopted him #CatDrama', likes: 0 },
+    { id: 9, path: './images/Chloe.png', description: 'One of my favorite hobbies is digital video game art. Meet Chloe from Life is Strange.', likes: 0 }
 
 ];
 

@@ -1,21 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap');
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  padding: .5em;
+  padding: .1em;
   color: white;
-  /* margin-bottom: 1em; */
+  margin-bottom: 1em;
   background-color: rgb(102, 43, 129);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Permanent Marker', cursive;
   font-weight: lighter;
-  font-size: 48px;
+  font-size: 40px;
   /* margin-bottom: 3px; */
 }
 
 .app-description{
-  font-size: 20px;
-  font-family: open sans, sans-serif;
+  font-size: 25px;
+  font-family: 'Overpass', sans-serif;
   font-weight: lighter;
   position: relative; top: -40px;
 }
@@ -35,10 +38,11 @@
   justify-content: center;
   align-items: normal;
   align-content: normal;
-  /* column-gap: 1px; */
-  row-gap: 40px;
+  column-gap: 1.5px;
+  row-gap: 1.5em;
 }
 
+/* resizes the images from looking gigantic to being proportionate with the page */
 .imgFix {
   height: 500px;
   width: auto;  
@@ -60,7 +64,19 @@
   height: 400px;
   width: 400px;
   overflow: hidden;
+}
+
+.imgDescription{
+  font-family: 'Overpass', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(102, 43, 129);
   border-radius: 15px;
+  height: 370px;
+  width: auto;
 }
 
 .footer{
